@@ -1,0 +1,226 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.--regular {
+  font-weight: 400;
+}
+
+.--medium {
+  font-weight: 500;
+}
+
+.--semibold {
+  font-weight: 600;
+}
+
+.--bold {
+  font-weight: 700;
+}
+.--extra{
+  font-weight: 800;
+}
+
+.--uppercase {
+  text-transform: uppercase;
+}
+
+// h1, h2 {
+//   font-family: 'Antqua', sans-serif;
+// }
+
+// h3, h4, h5, h6 {
+//   font-family: 'Lato', sans-serif;
+// }
+
+.heading-1 {
+  @include fontSize(34, 56);
+  line-height: 1.2;
+}
+
+.heading-2 {
+  @include fontSize(28, 48);
+  line-height: 1.25;
+}
+
+.heading-3 {
+  @include fontSize(22, 36);
+  line-height: 1.22;
+}
+
+.heading-4 {
+  @include fontSize(18, 28);
+  line-height: 1.32;
+}
+
+.heading-5 {
+  @include fontSize(16, 24);
+  line-height: 1.64;
+}
+
+.heading-6 {
+  @include fontSize(14, 18);
+  line-height: 1.6;
+}
+
+.icon-arrow-bottom:before {
+  content: "\e900";
+}
+.icon-buvette:before {
+  content: "\e901";
+  color: #b78131;
+}
+.icon-checkmark:before {
+  content: "\e902";
+}
+.icon-drop:before {
+  content: "\e910";
+  color: #a97456;
+}
+.icon-envelope:before {
+  content: "\e911";
+}
+.icon-footerAboutUs:before {
+  content: "\e912";
+}
+.icon-footerCategories:before {
+  content: "\e913";
+  color: #8e6954;
+}
+.icon-footerTours:before {
+  content: "\e914";
+  color: #8e6954;
+}
+.icon-headerSliderLeft:before {
+  content: "\e915";
+  color: #8e6954;
+}
+.icon-headerSliderRight:before {
+  content: "\e916";
+  color: #8e6954;
+}
+.icon-kidsRoom:before {
+  content: "\e917";
+  color: #b78131;
+}
+.icon-lifecell:before {
+  content: "\e919";
+  color: #f8bd11;
+}
+.icon-location:before {
+  content: "\e91a";
+  color: #777;
+}
+.icon-parking:before {
+  content: "\e924";
+  color: #b78131;
+}
+.icon-person:before {
+  content: "\e925";
+  color: #fff;
+}
+.icon-phone:before {
+  content: "\e926";
+}
+.icon-pool:before {
+  content: "\e927";
+  color: #b78131;
+}
+.icon-primarySliderLeft:before {
+  content: "\e928";
+  color: #fff;
+}
+.icon-primarySliderRight:before {
+  content: "\e929";
+  color: #fff;
+}
+.icon-quotesDown:before {
+  content: "\e92a";
+  color: #fff;
+}
+.icon-quotesUp:before {
+  content: "\e92b";
+  color: #fff;
+}
+.icon-restaurant:before {
+  content: "\e92c";
+  color: #b78131;
+}
+.icon-sauna:before {
+  content: "\e92d";
+  color: #b78131;
+}
+.icon-search:before {
+  content: "\e92e";
+}
+.icon-solarium:before {
+  content: "\e935";
+  color: #b78131;
+}
+.icon-spa:before {
+  content: "\e936";
+  color: #b78131;
+}
+.icon-unorderedListDot:before {
+  content: "\e937";
+  color: #8e6954;
+}
+.icon-viber:before {
+  content: "\e938";
+  color: #fff;
+}
+.icon-wifi:before {
+  content: "\e948";
+}
+
+.icon-visa:before {
+  content: '';
+  display: inline-block;
+  width: 49px;
+  height: 15px;
+  background: url('../../img/vektor/visa.svg') no-repeat center center;
+}
+
+.icon-mts:before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('../../img/vektor/mts.svg') no-repeat center center;
+}
+
+.icon-kyivstar:before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('../../img/vektor/kyivstar.svg') no-repeat center center;
+}
+
+.icon-masterCard:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 15px;
+  background: url('../../img/vektor/masterCard.svg') no-repeat center center;
+}
+
+.icon-discount:before {
+  content: '';
+  display: inline-block;
+  width: 42px;
+  height: 39px;
+  background: url('../../img/vektor/discount.svg') no-repeat;;
+}
+

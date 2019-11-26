@@ -1,0 +1,40 @@
+@mixin transition($time) {
+  -webkit-transition: all $time + 0s ease-out;
+  -moz-transition: all $time + 0s ease-out;
+  -o-transition: all $time + 0s ease-out;
+  transition: all $time + 0s ease-out;
+}
+
+@function get-vw($target) { 
+  $vw-context: (1320*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vh($target) { 
+  $vh-context: (665*.01) * 1px;
+  @return ($target/$vh-context) * 1vh;
+}
+
+@function get-vmax($target) { 
+  $vw-context: (1320*.01) * 1px;
+  @return ($target/$vw-context) * 1vmax;
+}
+
+@mixin grid-size($size) {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 $size;
+  -ms-flex: 0 0 $size;
+  flex: 0 0 $size;
+  max-width: $size;
+}
+
+@mixin fontSize($minSize, $maxSize) {
+  font-size: $maxSize + 0px;
+  font-size: -webkit-calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+}
+
+@mixin order($number) {
+  order: $number;
+}

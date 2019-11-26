@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: $whiteColor;
+  padding: 10px 24px;
+  font-weight: 700;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  @include fontSize(14, 16);
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  @include transition(0.3);
+  &-primary {
+    background: $darkYellowColor;
+    &:hover {
+      background: transparent;
+      border: 1px solid $darkYellowColor;
+      color: $darkYellowColor;
+    }
+  }
+  &-red {
+    background: $redColor;
+    border-radius: 100px;
+  }
+  &-transparent {
+    background: transparent;
+    color: $darkYellowColor;
+    border: 1px solid $darkYellowColor;
+    &:hover {
+      background: $darkYellowColor;
+      color: $whiteColor;
+      border: 1px solid $darkYellowColor;
+    }
+  }
+}

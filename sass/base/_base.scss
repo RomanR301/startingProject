@@ -1,0 +1,87 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.default-icon {
+  width: 100%;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.--relative {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.overlap {
+  position: relative;
+  z-index: 2;
+}
+
+
+.full-height, body, html {
+  height: 100%;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.body-padding {
+  height: 137px;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .body-padding {
+    height: 62px
+  }
+}
+
+.preventScrolling {
+  overflow: hidden;
+}
+
+.app {
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    color: $defaultTextColor;
+    line-height: 1.85;
+  }
+
+  &-screen {
+    &__title {
+      margin: 0 0 16px 0;
+      color: $defaultTextColor;
+      @media (max-width: $breakpoint-md) {
+        margin: 0 0 12px 0;
+      }
+    }
+    &__description {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+
+.carousel {
+  opacity: 0;
+  &.loadSlider {
+    opacity: 1;
+  }
+}

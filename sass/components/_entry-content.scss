@@ -1,0 +1,160 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.entry-content {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  & p {
+    @include fontSize(14, 16);
+    font-weight: 400;
+    line-height: 1.85;
+    color: $defaultTextColor;
+    margin-bottom: 24px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 16px;
+    }
+  }
+
+  & h1 {
+    @include fontSize(34, 56);
+    line-height: 1.2;
+    margin-bottom: 50px;
+  }
+
+  & h2 {
+    @include fontSize(28, 48);
+    line-height: 1.25;
+    margin: 12px 0 16px 0;
+  }
+
+  & h3 {
+    @include fontSize(22, 36);
+    line-height: 1.22;
+    margin: 12px 0 16px 0;
+  }
+
+  & h4 {
+    @include fontSize(18, 28);
+    line-height: 1.32;
+    margin: 12px 0 16px 0;
+  }
+
+  & h5 {
+    @include fontSize(16, 24);
+    line-height: 1.64;
+    margin: 12px 0 16px 0;
+  }
+
+  & h6 {
+    @include fontSize(14, 18);
+    line-height: 1.6;
+    margin: 12px 0 16px 0;
+  }
+
+  & h1, & h2, & h3 {
+    font-weight: bold;
+  }
+
+  & img {
+    margin-bottom: 30px;
+    object-fit: cover;
+    max-height: 500px;
+    margin-bottom: 36px;
+  }
+
+  & a {
+    color: $darkYellowColor;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    &:after {
+      content: "";
+      position: absolute;
+      background: $darkBrownColor;
+      height: 1px;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      @include transition(.3);
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  } 
+
+  & strong {
+    font-weight: 700;
+  }
+
+  & ul {
+    margin-bottom: 24px;
+    & li {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $defaultTextColor;
+      position: relative;
+      padding-left: 12px;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 5px;
+        height: 5px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background: $darkBrownColor;
+      }
+    }
+  }
+  & ol {
+    margin-bottom: 24px;
+    & li {
+      font-size: 16px;
+      counter-increment: li;
+      &:before {
+        content: counter(li) '.';
+        font-weight: 700;
+        color: $darkBrownColor;
+        display: inline-block;
+        padding-right: 7px;
+        width: 24px;
+      }
+    }
+  }
+
+  & blockquote {
+    position: relative;
+    margin: 20px 0 24px 0;
+    padding: 36px 84px;
+    background: rgba(119, 119, 119, .1);
+    color: $defaultTextColor;
+    text-align: center;
+    font-weight: 600;
+    @include fontSize(14, 18);
+    line-height: 26px;
+    margin-bottom: 30px;
+    @media(max-width: $breakpoint-md) {
+      padding: 36px 24px;
+    }
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 25px;
+      bottom: -15px;
+      background: url('../../img/vektor/quoteDown.svg') no-repeat center center;
+      width: 59px;
+      height: 47px;
+    }
+    &:after {
+      top: -15px;
+      left: 25px;
+      background: url('../../img/vektor/quoteUp.svg') no-repeat center center;
+    }
+  }
+}
